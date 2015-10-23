@@ -1,0 +1,12 @@
+[Unit]
+Description=OpenStack Store GA Data to Redis Server
+After=syslog.target network.target
+
+[Service]
+Type=notify
+Restart=always
+User=root
+ExecStart=/usr/bin/ga_to_redis
+
+[Install]
+WantedBy=multi-user.target
